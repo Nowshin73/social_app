@@ -1,5 +1,10 @@
 import express from 'express';
+import { postService } from './post.service';
+import { postController } from './post.controller';
 
 const router = express.Router();
 
-export default router;
+router.post('/create', postController.createPost);
+
+const postRoutes = router;
+export default postRoutes;
